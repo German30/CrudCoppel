@@ -1,0 +1,52 @@
+<div class="container" style="margin-top: 10px;">
+    <div class="card">
+        <div class="card-header">
+            <h3>Inventario</h3>
+        </div>
+        <div class="card-body">
+            <input name="" type="text" class="form-control">
+            <table class="table table-hover text-center">
+                <thead>
+                    <tr>
+                        <th>Sku</th>
+                        <th>Descontinuado</th>
+                        <th>Articulo</th>
+                        <th>Marca</th>
+                        <th>Modelo</th>
+                        <th>Departamento</th>
+                        <th>Clase</th>
+                        <th>Familia</th>
+                        <th>Stock</th>
+                        <th>Cantidad</th>
+                        <th>Fecha Alta</th>
+                        <th>Fecha Baja</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let persona of personas" class="text-center">
+                        <td>{{persona.sku}}</td>
+                        <td>{{persona.Descontinuado}}</td>
+                        <td>{{persona.Artiuclulo}}</td>
+                        <td>{{persona.Marca}}</td>
+                        <td>{{persona.Modelo}}</td>
+                        <td>{{persona.Departamento}}</td>
+                        <td>{{persona.Clase}}</td>
+                        <td>{{persona.Familia}}</td>
+                        <td>{{persona.Stock}}</td>
+                        <td>{{persona.Cantidad}}</td>
+                        <td>{{persona.Fecha_Alta}}</td>
+                        <td>{{persona.Fecha_Baja}}</td>
+                        <td>
+                            <button (click)="Editar(persona)" class="btn btn-warning ">Editar</button>
+                        </td>
+                        <td>
+                            <button (click)="Delete(persona)" class="btn btn-danger " style="margin-left: 5px; ">Delete</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+
+        </div>
+    </div>
+</div>
+<router-outlet></router-outlet>
